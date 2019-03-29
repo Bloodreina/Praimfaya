@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex 9 - HTML</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			function depositar(){
+	
+				guardado.value = Number(guardado.value) + Number(deposito.value);
+
+				if(guardado.value >= 4000){
+					imagem.innerHTML = "<img src='imagens/moto.jpg'>";
+				}
+				if(guardado.value >= 10000){
+					imagem.innerHTML = "<img src='imagens/carrosimples.jpg'>";
+				}
+				if(guardado.value >= 20000){
+					imagem.innerHTML = "<img src='imagens/carrobom.jpg'>";
+				}
+				if(guardado.value >= 80000){
+					imagem.innerHTML = "<img src='imagens/casasimples.jpg'>";
+				}
+			}
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light text-center">Depositos</h2>
+
+		<form>
+			<div class="jumbotron divP bg-dark text-light mx-auto form-control">
+				Valor de Depósito:
+				<input type="number" id="deposito"><br>
+
+				Valor já guardado:
+				<input type="number" value="0" id="guardado"><br>
+
+				<button type="button" onclick="depositar()">Depositar</button>
+			</div>
+		</form>
+
+		<div id="imagem"></div>
+	</body>
+</html>

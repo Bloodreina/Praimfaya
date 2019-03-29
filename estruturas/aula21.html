@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aula 21 - HTML</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			function votacao(){
+
+				if(idade.value >= 16){
+					div_votacao.innerHTML = 'Já pode votar!';
+				}else{
+					div_votacao.innerHTML = 'Ainda não pode votar!';
+				}
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark text-light bg-dark">Estruturas de controle</h2>
+
+		<form>
+			
+			<div class="jumbotron bg-dark text-light form-group mx-auto divP">
+				Sua Idade: <input type="number" class="form-control" id="idade">
+				<br>
+				<button type="button" class="btn btn-outline-light btn-block" onclick="votacao()">Verificar Votação</button>
+			</div>
+
+		</form>
+
+		<div id="div_votacao" class="text-center">
+			
+		</div>
+
+	</body>
+</html>

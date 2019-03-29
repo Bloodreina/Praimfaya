@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex 7 - HTML</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			function calcular(){
+
+				if (salario.value > 5000) {
+					resultado.innerHTML = "#amigodoneymar";
+				}else if (salario.value > 2500){
+					resultado.innerHTML = "#ostentação";	
+				}else if (salario.value >= 1000) {
+					resultado.innerHTML = "#estoumenosprobre";
+				}
+				if (salario.value < 200) {
+					resultado.innerHTML = "#precisodeajuda";
+				}else if (salario.value < 1000) {
+					resultado.innerHTML = "#aindatenhoqueralarmuito";
+				}
+				
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light text-center">Status Social</h2>
+
+		<form>
+			<div class="jumbotron divP bg-dark text-light mx-auto form-group">
+				
+				Digite seu salário:
+				<input type="number" id="salario" class="form-control"><br>
+
+				<button class="btn btn-outline-light btn-block" type="button" onclick="calcular()">Status Social</button>
+
+			</div>
+		</form>
+
+		<div id="resultado" class="text-center"></div>
+
+	</body>
+</html>

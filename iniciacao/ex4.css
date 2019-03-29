@@ -1,0 +1,10 @@
+
+	.corAzul{
+
+		color: blue;
+
+	}
+
+	::placeholder{
+		color: blue;
+	}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Ex 8 - HTML</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			function calcular(){
+
+				if (idade.value < 14) {
+					resultado.innerHTML = "Você é praticamente uma criança";
+				}else if(idade.value < 18){
+					resultado.innerHTML = "Você é menor de idade";
+
+					if (filhos.value > 0){
+						divFilhos.innerHTML = "Nossa, começou cedo, hein :O";
+					}
+				}
+
+				if(idade.value >= 18){
+					resultado.innerHTML = "Você é maior de idade";
+					if(filhos.value < 3){
+						divFilhos.innerHTML = "Parabéns pelos filhos";
+					}else{
+						divFilhos.innerHTML = "Não tem TV e internet em casa?";
+					}
+				}
+
+				if(filhos.value == 0){
+					divFilhos.innerHTML = "";
+				}
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light text-center">Analisar Vida</h2>
+
+		<form>
+			<div class="jumbotron divP bg-dark text-light mx-auto form-group">
+				
+				Digite sua idade:
+				<input type="number" id="idade" class="form-control"><br>
+
+				Informe sua quantidade de filhos:
+				<input type="number" id="filhos" class="form-control"><br>
+
+				<button class="btn btn-outline-light btn-block" type="button" onclick="calcular()">Analisar Vida</button>
+
+			</div>
+		</form>
+
+		<div id="resultado" class="text-center"></div>
+		<div id="divFilhos" class="text-center"></div>
+
+	</body>
+</html>

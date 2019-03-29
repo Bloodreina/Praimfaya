@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex - 7 JS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+				
+			function frase(){
+
+				div_frase.innerHTML = frases.value;
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-white">Complete a frase</h2>
+
+		<form>
+			
+			<div class="jumbotron div-loka mx-auto form-group bg-dark text-white">
+				
+				Escolha uma frase e veja a resposta:
+
+				<select id="frases" class="form-control">
+					<option>Selecione uma frase</option>
+					<option value="Que eu leve a concórdia, que eu leve o amor!">Onde houver ódio e rancor</option>
+					<option value="Que eu leve o perdão1">Onde há ofensa que dói</option>
+					<option value="Que eu leve a união e Tua paz!">Onde houver a discórdia</option>
+					<option value="Quero bem no seu coração, semear alegria, pra florir gratidão!">Onde encontrar um irmão a chorar de tristeza, sem ter voz e nem vez</option>
+					<option></option>
+				</select><br><br>
+
+				<button type="button" class="btn btn-light text-dark btn-block" onclick="frase()">Revelar Boa Obra</button>
+
+			</div>
+
+		</form>
+
+		<div class="div-frase" id="div_frase"></div>
+
+	</body>
+</html>

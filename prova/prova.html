@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prova</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="prova.css">
+
+		<script type="text/javascript">
+			
+			function calculo_cinema(){
+
+				let precoIngresso = (preco_ingresso.value / 2);
+
+				let x = eval(`(${precoIngresso} + ${itens.value}) * ${qtd_vezes.value}`);
+
+				let y = (x * 12);
+
+				resultado.innerHTML = `Camila, você gasta R$ ${x.toFixed(2)} por mês e R$ ${y.toFixed(2)} por ano com suas idas ao cinema.`
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<div class="alert alert-dark bg-dark text-light" role="alert"><h2>Cálculo de gastos anuais de Camila Toa</h2></div>
+
+		<form>
+			
+			<div class="jumbotron mx-auto div-principal bg-dark text-light form-group">
+				
+				Quantas vezes vai ao cinema por vez:
+				<input type="number" id="qtd_vezes" class="form-control"> <br>
+
+				Preço do ingresso:
+				<input type="number" id="preco_ingresso" class="form-control"><br>
+
+				Itens para comer:
+				<select class="form-control" id="itens">
+					<option>-- Selecione uma opção --</option>
+					<option value="0">#Economia! Só o filme</option>
+					<option value="22">Só pipoca</option>
+					<option value="30">Pipoca e Refrigerante</option>
+					<option value="50">Combo de Pipoca + Refri + M&M</option>
+				</select><br>
+
+				<button type="button" class="btn btn-outline-light btn-block" onclick="calculo_cinema()">Calcular gastos com Cinema</button>
+
+			</div>
+
+		</form>
+
+		<div id="resultado" class="div-resultado"></div>
+
+	</body>
+</html>

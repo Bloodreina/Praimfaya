@@ -1,0 +1,13 @@
+
+	/*Em arquivos .css só podemos escrever conteúdo em linguagem CSS*/
+
+	h2{
+		color: blue;
+	}
+	p{
+		color: #f0990f;
+	}
+	b{
+		font-size: 2em;
+		background-color: yellow;
+	}

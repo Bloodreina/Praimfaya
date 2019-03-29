@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex 17 - HTML</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+
+			var inicio, vidaAzul, vidaVer;
+
+			var condicao = true;
+
+			function comecar(){
+
+				while(condicao){
+
+					setInterval(function(){
+
+						// inicio = Math.random();
+
+						// inicio = (inicio * 10).toFixed(0);
+
+						// if(inicio % 2 == 0){
+						// 	document.getElementByEd('btn1').click();
+						// }else{
+						// 	document.getElementByEd('btn2').click();
+						// }
+					}, 10000);
+
+				}
+
+			}
+			
+			function menos1(){
+
+				vidaAzul = vida1.innerHTML;
+
+				let valor = Math.random();
+
+				valor = (valor * 50).toFixed(0);
+
+				vidaAzul = vidaAzul - valor;
+
+				vida1.innerHTML = vidaAzul;
+
+				barraV1.style.width = vidaAzul + "px";
+
+				barraV1.innerHTML = vidaAzul;
+
+				log.innerHTML += `<span class='text-info'>Gordão Azul tomou ${valor} de dano! <br/></span>`;
+
+				if(vida1.innerHTML <= 150){
+					barraV1.style.backgroundColor = "orange";
+				}
+
+				if(vida1.innerHTML <= 50){
+					barraV1.style.backgroundColor = "red";
+				}
+
+				if(vida1.innerHTML <= 0){
+
+					barraV1.style.width = 0 + "px";
+
+					condicao = false;
+
+					gordao1.src = "imagens/caixao.jpeg";
+
+					btn1.style.display = "none";
+					btn2.style.display = "none";
+
+					divResultado.innerHTML = "Gordão de vermelho venceu a batalha de Comida!";
+
+				}
+
+			}
+
+			function menos2(){
+
+				vidaVer = vida2.innerHTML;
+
+				let valor = Math.random();
+
+				valor = (valor * 50).toFixed(0);
+
+				vidaVer = vidaVer - valor;
+
+				vida2.innerHTML = vidaVer;
+
+				barraV2.style.width = vidaVer + "px";
+
+				barraV2.innerHTML = vidaVer;
+
+				log.innerHTML += `<span class='text-danger'>Gordão Vermelho tomou ${valor} de dano! <br/></span>`;
+
+				if(vida2.innerHTML <= 150){
+					barraV2.style.backgroundColor = "orange";
+				}
+
+				if(vida2.innerHTML <= 50){
+					barraV2.style.backgroundColor = "red";
+				}
+
+				if(vida2.innerHTML <= 0){
+
+					barraV2.style.width = 0 + "px";
+
+					condicao = false;
+
+					gordao2.src = "imagens/caixao.jpeg";
+
+					btn1.style.display = "none";
+					btn2.style.display = "none";
+
+					divResultado.innerHTML = "Gordão de azul venceu a batalha de Comida!";
+
+				}
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light text-center">Briga por Comida</h2>
+
+		<div class="divPrincipal">
+			<div class="divLuta">
+				<div class="mx-auto">
+					<img src="imagens/luta1.png" class="foto" id="gordao1">
+					<div class="barra1 text-center" id="barraV1">300</div>
+					<button class="btn btn-info btn-block" onclick="menos1()" id="btn1">Apanhar</button>
+
+					<span style="display: none" id="vida1">300</span>
+
+				</div>
+			</div>
+
+			<div class="btnResete">
+				<a href="" class="btn btn-dark btn-block">Resetar</a><br>
+
+				<button class="btn btn-dark btn-block" onclick="comecar()">Começar a batalha</button>
+			</div>
+
+			<div class="divLuta1">
+				<div class="mx-auto">
+					<img src="imagens/luta2.png" class="foto" id="gordao2">
+					<div class="barra2 text-center" id="barraV2">300</div>
+					<button class="btn btn-danger btn-block" onclick="menos2()" id="btn2">Apanhar</button>
+
+					<span style="display: none" id="vida2">300</span>
+
+				</div>
+			</div>
+
+		</div><br><br>
+
+		<div>
+			
+			<div class="text-center"><h1 id="divResultado"></h1></div>
+
+			<div class="divlog">
+				<p id="log"></p>
+			</div>
+
+		</div>
+
+	</body>
+</html>

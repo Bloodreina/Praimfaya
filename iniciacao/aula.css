@@ -1,0 +1,25 @@
+
+	body{
+		background-repeat: no-repeat;
+		background-position: center;
+		
+	}
+
+	.div1{
+
+		width: 270px;
+		height: 160px;
+		
+
+	}
+	#cidade{
+
+		color: gray;
+
+
+	}
+	#bairro{
+
+		color: orange;
+
+	}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Equipe ADA</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+				
+			function calcular_calorias(){
+
+				let result;
+
+				result = (caminhada.value * 2) + (abdominais.value * 1.2) + (flexoes.value * 1.7) - (latas.value * 3);
+
+				let texto = `Você perdeu ${result.toFixed(2)} de calorias`;
+
+				$('#resultado').html(texto);
+
+			}	
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-light bg-dark">Equipe Ada - A Jornada Saudável</h2>
+
+		<form>
+			
+			<div class="jumbotron div-loka mx-auto form-group bg-dark text-white">
+				
+				Km de caminhada:
+				<input type="number" id="caminhada" class="form-control"><br>
+
+				Numero de abdominais:
+				<input type="number" id="abdominais" class="form-control"><br>
+
+				Número de flexões:
+				<input type="number" id="flexoes" class="form-control"><br>
+
+				Latas de Coca-Cola:
+				<input type="number" id="latas" class="form-control"><br>
+
+				<button type="button" class="btn btn-outline-warning btn-lg btn-block" onclick="calcular_calorias()" data-toggle="modal" data-target="#modalAlert">Calcular calorias perdidas</button>
+
+			</div>
+
+		</form>
+
+		<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<h5 class="modal-title text-dark">Perda de calorias - Equipe Ada</h5>
+						<button type="button" class="close" data-dismiss="modal">
+							<span class="text-dark">&times;</span>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						
+						<h5>Calorias: </h5>
+						<p id="resultado"></p>
+
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-warning btn-block" data-dismiss="modal">OK</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	    <script src="../bootstrap4/js/bootstrap.min.js"></script>
+
+	</body>
+</html>

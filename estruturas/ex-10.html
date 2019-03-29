@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex 10 - HTML</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			let vZ = 0;
+			let vM = 0;
+
+			function votoZe(){
+
+				vZ++;
+
+				ze.innerHTML = vZ;
+
+			}
+
+			function votoMaria(){
+
+				vM++;
+
+				maria.innerHTML = vM;
+
+			}
+
+			function resultado(){
+
+				if (ze.innerHTML > maria.innerHTML){
+					ze.style.color = "blue";
+					maria.style.color = "red"
+				}else if(ze.innerHTML < maria.innerHTML){
+					maria.style.color = "blue";
+					ze.style.color = "red";
+				}else{
+					maria.style.color = "black";
+					ze.style.color = "black";
+				}
+
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light text-center">Votação</h2>
+
+		<form>
+			<div class="jumbotron divP mx-auto bg-dark text-light form-group">
+				
+				Votos do Zé Zuela:
+				<p id="ze">0</p><br>
+
+				Votos de Maria Bigodenha:
+				<p id="maria">0</p><br>
+
+				<button type="button" class="btn btn-outline-light btn-block" onclick="votoZe()">Votar no Zé Ruela</button>
+				<button type="button" class="btn btn-outline-light btn-block" onclick="votoMaria()">Votar na Maria Bigodenha</button>
+				<button type="button" class="btn btn-outline-light btn-block" onclick="resultado()">Resultado Parcial</button>
+
+			</div>
+		</form>
+
+	</body>
+</html>

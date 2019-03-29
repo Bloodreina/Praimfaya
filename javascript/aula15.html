@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Página teste</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+
+		<script type="text/javascript">
+			
+			$(document).ready(()=>{
+			 	alert('Já sei programar essa parte...');			
+			});
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-primary">Página com programação</h2>
+
+		<form>
+			<div class="form-group">
+				<input type="text" class="form-control" id="nome" placeholder="Seu nome">
+				<br><br>
+				<input type="text" class="form-control" id="idade" placeholder="Sua idade">
+				<br><br>
+
+				<button type="button" class="btn btn-outline-primary btn-block btn-lg" onclick="experimentar()">Experimenta!</button>
+
+				<br>
+
+				
+			</div>
+		</form>
+
+		<button type="button" class="btn btn-outline-danger btn-lg teste" data-toggle="popover" title="popoever" data-content="Que isso alek">Clica aqui burrao</button>
+
+	</body>
+</html>
+
+<script type="text/javascript">
+	
+	function experimentar(){
+
+		alert('Já sei programar essa parte...');
+		alert('mas aprendo rápido');
+		alert(`O titulo da página é ${document.title}`);
+		alert(`Seu nome é ${nome.value} boa muleque`);
+		alert(`Você se chama ${nome.value} e sua idade é de ${idade.value}!`)
+	}
+
+	
+
+</script>

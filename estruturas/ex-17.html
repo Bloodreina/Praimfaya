@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex 17 - HTML</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<script src="../jquery/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" href="../bootstrap4/css/bootstrap.min.css">
+
+		<script type="text/javascript">
+			
+			function menos1(){
+
+				let vida = vida1.innerHTML;
+
+				vida = vida - 25;
+
+				vida1.innerHTML = vida;
+
+				barraV1.style.width = vida + "px";
+
+				if(vida1.innerHTML <= 0){
+
+					gordao1.src = "imagens/caixao.jpeg";
+
+					btn1.disabled = "true";
+
+				}
+
+			}
+
+			function menos2(){
+
+				let vida = vida2.innerHTML;
+
+				vida = vida - 25;
+
+				vida2.innerHTML = vida;
+
+				barraV2.style.width = vida + "px";
+
+				if(vida2.innerHTML <= 0){
+
+					gordao2.src = "imagens/caixao.jpeg";
+
+					btn2.disabled = "true";
+
+				}
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light text-center">Jogo de lutinha</h2>
+		
+		<div class="divPrincipal">
+			<div class="divLuta">
+				<div class="mx-auto">
+					<img src="imagens/luta1.png" class="foto" id="gordao1">
+					<div class="barra1" id="barraV1"></div>
+					<button class="btn btn-dark btn-block" onclick="menos1()" id="btn1">Apanhar</button>
+
+					<span style="display: none" id="vida1">300</span>
+
+				</div>
+			</div>
+
+			<div class="btnResete">
+				<a href="" class="btn btn-dark btn-block">Resetar</a>
+			</div>
+
+			<div class="divLuta1">
+				<div class="mx-auto">
+					<img src="imagens/luta2.png" class="foto" id="gordao2">
+					<div class="barra2" id="barraV2"></div>
+					<button class="btn btn-dark btn-block" onclick="menos2()" id="btn2">Apanhar</button>
+
+					<span style="display: none" id="vida2">300</span>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

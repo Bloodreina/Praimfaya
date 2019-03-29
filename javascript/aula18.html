@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aula 18</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			function calcula_media(){
+
+				let media = (Number(nota1.value) + Number(nota2.value)) / 2;
+
+				div_mensagem.innerHTML = `Sua média é de: <b>${media}</b>`;
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light">Funções de conversões de números e exibição na página</h2>
+
+		<form>
+			<div class="jumbotron div-loka mx-auto form-group bg-dark text-white">
+				1° Nota: <input type="number" id="nota1" class="form-control" autofocus><br>
+				2° Nota: <input type="number" id="nota2" class="form-control"><br>
+
+				<button type="button" onclick="calcula_media()" class="btn btn-outline-warning btn-block">Calcular média</button>
+
+			</div>
+		</form>
+
+		<div id="div_mensagem" class="div-escondida">
+			
+
+
+		</div>
+
+		<!-- Optional JavaScript -->
+	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	    <script src="../bootstrap4/js/bootstrap.min.js"></script>
+
+	</body>
+</html>

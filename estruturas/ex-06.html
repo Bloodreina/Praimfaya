@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex 6 - HTML</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			function avaliacao(){
+
+				if(nota.value < 0){
+					resultado.style.color = 'darkred';
+					resultado.innerHTML = 'Não existe avaliação menor que 0!';
+				}else if(nota.value > 5){
+					resultado.style.color = 'darkred';
+					resultado.innerHTML = 'Não existe avaliação maior que 5!';
+				}else if(nota.value <= 2){
+					resultado.style.color = 'red';
+					resultado.innerHTML = 'Avaliação negativa';
+				}else if(nota.value >= 4){
+					resultado.style.color = 'blue';
+					resultado.innerHTML = 'Sua avaliação foi positiva';
+					alert("Só queria confirmar meus parabéns!");
+				}else if(nota.value = 3){
+					resultado.style.color = 'gray';
+					resultado.innerHTML = 'Sua avaliação foi neutra';
+				}
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light text-center">Avaliação</h2>
+
+		<form>
+			<div class="jumbotron divP bg-dark mx-auto text-light form-group">
+				
+				Que nota dá para o atendimento?
+				<input type="number" id="nota" class="form-control"><br>
+
+				<button type="button" class="btn btn-outline-light btn-block" onclick="avaliacao()">Salvar Avaliação</button>
+
+			</div>
+		</form>
+
+		<div id="resultado" class="text-center"></div>
+
+	</body>
+</html>

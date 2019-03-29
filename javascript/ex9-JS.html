@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex 9 - JS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			function mostrarNota(){
+
+				let resultado = eval(`(5 - (((${primeira.value} + ${segunda.value} + ${terceiro.value}) / 3) * 0.4)) / 0.6`);
+
+				div_9.innerHTML = `Olá, ${nome.value}, Para passar você deve tirar ${resultado.toFixed(2)} na integrada`;
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light">Calcular suas notas</h2>
+
+		<form>
+			
+			<div class="jumbotron div-encorajadora mx-auto bg-dark text-light form-group">
+				
+				Digite seu nome: <input type="text" id="nome" class="form-control"><br>
+
+				1° Nota continuada: <input type="number" id="primeira" class="form-control"><br>
+
+				2° Nota continuada: <input type="number" id="segunda" class="form-control"><br>
+
+				3° Nota continuada: <input type="number" id="terceiro" class="form-control"><br>
+
+				<button type="button" class="btn btn-outline-light btn-block" onclick="mostrarNota()">Calcular nota p/ passar</button>
+
+			</div>
+
+		</form>
+
+		<div class="div-9" id="div_9"></div>
+
+	</body>
+</html>

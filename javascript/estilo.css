@@ -1,0 +1,46 @@
+
+h2{
+	text-align: center;
+}
+
+input{
+	width: 250px;
+}
+
+.div-loka{
+	width: 600px;
+}
+.div-escondida{
+	color: red;
+	text-align: center;
+}
+
+.div-frase{
+	color: green;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.div-encorajadora{
+	width: 400px;
+}
+.div-frase-8{
+	text-align: center;
+	color: black;
+	margin-top: 25px;
+}
+
+.div-9{
+	text-align: center;
+	color: red;
+}
+.div-10{
+	color: blue;
+	text-align: center;
+}
+.div-11{
+	text-align: center;
+}
+.div-botoes{
+	width: 300px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex 5 - HTML</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			function media(){
+				let x = (continuada.value * 0.2) + Number(integrada.value);
+
+				if (x >= 5) {
+					div_resultado.innerHTML = `Parabéns, ${nome.value}, você foi aprovado com média final ${x.toFixed(2)}`;
+					div_imagem.innerHTML = "<img src='imagens/positivo.jpg'>";
+				}else{
+					div_resultado.innerHTML = `Olá, ${nome.value}, infelizmente você foi reprovado com média final ${x.toFixed(2)}`;
+					div_imagem.innerHTML = "<img src='imagens/negativo.jpg'>";
+				}
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light text-center">Média alunos BandTec</h2>
+
+		<form>
+			<div class="jumbotron divP bg-dark text-light form-group mx-auto">
+				
+				Digite o nome do aluno:
+				<input type="text" id="nome" class="form-control"><br>
+
+				Digite a média das continuadas:
+				<input type="number" id="continuada" class="form-control"><br>
+
+				Digite a nota integrada:
+				<input type="number" id="integrada" class="form-control"><br>
+
+				<button type="button" class="btn btn-outline-light btn-block" onclick="media()">Verificar Resultado</button>
+
+			</div>
+		</form>
+
+		<div id="div_resultado" class="text-center"></div>
+		<div id="div_imagem" class="text-center"></div>
+
+	</body>
+	
+</html>

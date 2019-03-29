@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex 10 - JS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			function calcularDesconto(){
+
+				let calculoX = brutoSalario.value * inss.value;
+
+				let calculoY = eval(`${brutoSalario.value} - ${calculoX}`);
+
+				div_resultado.innerHTML = `Olá, ${nome.value}. Seu desconto de INSS será de R$ ${calculoX.toFixed(2)}. Assim seu salário líquido será de R$ ${calculoY.toFixed(2)}`;
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light">Desconto previdência</h2>
+
+		<form>
+			
+			<div class="jumbotron form-group div-encorajadora mx-auto bg-dark text-light">
+				
+				Digite seu nome: <input type="name" id="nome" class="form-control"><br>
+
+				Digite seu salário bruto: <input type="number" id="brutoSalario" class="form-control"><br>
+
+				<select class="form-control" id="inss">
+					<option>Selecione uma faixa de Salário</option>
+					<option value="0">Faixa: 0 a 1000</option>
+					<option value="0.1">Faixa: 1000 a 3000</option>
+					<option value="0.2">Faixa: Mais de 3000</option>
+				</select><br>
+
+				<button class="btn btn-outline-light btn-block" onclick="calcularDesconto()" type="button">Calcular Desconto</button>
+
+			</div>
+
+		</form>
+
+		<div id="div_resultado" class="div-10"></div>
+
+	</body>
+</html>

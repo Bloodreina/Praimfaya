@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ex Combo das zoira</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			function mostrarFrase(){
+
+				frase.innerHTML = zoeira.value;
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark bg-dark text-light">Obtendo valores de select (combobox)</h2>
+
+		<form>
+			
+			<div class="jumbotron div-loka mx-auto form-group bg-dark text-white">
+				
+				Time: 
+				<select id="zoeira">
+					<option value="Escolha um time">Escolha um time</option>
+					<option value="Sem Mundial">Palmeiras</option>
+					<option value="Rebaixado no paulistão">São Paulo</option>
+					<option value="Estádio cheio de imprestimo">Corinthians</option>
+					<option value="Estádio é um Quiosque">Santos</option>
+				</select><br><br>
+
+				<button type="button" class="btn btn-outline-secondary text-white btn-block" onclick="mostrarFrase()">Revele a Zoeira</button>
+
+			</div>
+
+		</form>
+
+		<div id="frase" class="div-escondida"></div>
+
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+
+		<script type="text/javascript">
+			
+			function calcular_divisao(){
+
+				let cota_amigo = preco_pizza.value / amigos.value;
+				alert(`A pizza de ${sabor_pizza.value} vai custar ${cota_amigo} R$ para cada um!`)
+
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h2 class="alert alert-dark">Amigos e a pizza</h2>
+		
+		<form>
+			<div class="form-group div-loka mx-auto shadow-lg">
+				Quantos amigos vão rachar?
+				<input type="number" class="form-control" id="amigos"><br><br>
+
+				Sabor da pizza?
+				<input class="form-control" type="text" id="sabor_pizza"><br><br>
+
+				Quanto é a pizza:
+				<input type="text" class="form-control" id="preco_pizza"><br><br>
+
+				<button type="button" onclick="calcular_divisao()" class="btn btn-outline-dark btn-lg btn-block">Calcular divisão</button>
+			</div>
+		</form>
+	</body>
+</html>
